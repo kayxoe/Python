@@ -16,7 +16,7 @@ def getDictinctData(data):
 
 #获取全部城市
 def getAllCity(cities):
-	ak='2CKBZ-4S7WW-56RR3-OQJZU-UNKU6-SSFHW'
+	ak='申请的AK'
 	url='https://apis.map.qq.com/ws/district/v1/list?key='+ak
 	req=requests.get(url)
 	content=req.content
@@ -83,7 +83,7 @@ def writeData2Excel(filename,tbname,data):
 	file.save(os.getcwd()+'/result/'+filename+'.xls')
 
 #获取全国含关键词的地址及电话
-ak='2CKBZ-4S7WW-56RR3-OQJZU-UNKU6-SSFHW'
+ak='申请的AK'
 methods=['search']#使用位置搜索
 keywords=['酒店']#搜索关键词列表
 filters=['tel<>null']#过滤掉没有电话的结果
