@@ -99,6 +99,7 @@ getAllCity(regions)
 
 #遍历关键词及城市
 for i in range(len(keywords)):
+	querydata.clear()
 	for j in range(len(regions)):
 		url='https://apis.map.qq.com/ws/place/v1/'+methods[0]+'?boundary=region('+regions[j]+')&keyword='+keywords[i]+'&filter='+filters[0]+'&page_size='+page_size+'&page_index='+str(page_index)+'&key='+ak
 		req=requests.get(url)
