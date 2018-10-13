@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # 获取指定地址的位置信息
 def getLocations(keyword,region):
-	ak='6diPDlNr9KrQyWCrdxNc0UC1ARYPzHaG'
+	ak='百度地图AK'
 	url='http://api.map.baidu.com/place/v2/search?query='+keyword+'&region='+region+'&output=json&ak='+ak
 	req=requests.get(url)
 	content=req.content
@@ -18,7 +18,7 @@ c.execute('''CREATE TABLE VILLAGE_TABLE(VILLAGE_NAME VARCHAR2(100),VILLAGE_ADDRE
 ORGIN_PLACE VARCHAR2(100),RADIUS NUMBER(10),\
 MIN_COSTTIME NUMBER(5),TRANS_SOLUTIONS VARCHAR2(2000));''')
 
-ak='6diPDlNr9KrQyWCrdxNc0UC1ARYPzHaG'
+ak='百度地图AK'
 keyword='亚信科技'
 region='南京'
 query='房地产'
